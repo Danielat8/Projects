@@ -1,0 +1,13 @@
+@use "../abstracts/variables" as var;
+@use "../abstracts/mixins" as mix;
+.pgsec {
+  height: auto;
+  width: 100%;
+  padding-bottom: 20px;
+}
+.tx2 {
+  padding-top: 100px;
+}
+.ipo {
+  margin-bottom: 150px;
+}
