@@ -1,0 +1,51 @@
+@use "../abstracts/variables" as var;
+@use "../abstracts/mixins" as mix;
+.sc {
+  background-color: var.$color-primary;
+  color: var.$color-base;
+}
+.active,
+.sc:hover {
+  background-color: var.$color-sec;
+  color: var.$color-primary;
+  transition: background-color 6s;
+  transition: color 5s;
+}
+.none {
+  appearance: none;
+}
+
+.bor {
+  border: 1px solid var.$color-yellow;
+  height: 30px;
+  padding-left: 10px;
+  width: 240px;
+  background-color: var.$color-yellow;
+}
+.zoom {
+  transition: transform 0.2s;
+}
+
+.zoom:hover {
+  -ms-transform: scale(1.1); /* IE 9 */
+  -webkit-transform: scale(1.1); /* Safari 3-8 */
+  transform: scale(1.1);
+}
+
+.card {
+  margin-bottom: 30px;
+  box-shadow: 5px 5px #8888888d;
+}
+
+.text-start {
+  padding-left: 10px;
+}
+.hth {
+  float: right;
+  margin-right: 10px;
+}
+.circle {
+  display: flex;
+  justify-content: end;
+  align-items: end;
+}
