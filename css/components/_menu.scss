@@ -1,0 +1,102 @@
+@use "../abstracts/variables" as var;
+@use "../abstracts/mixins" as mix;
+
+img {
+  width: 80px;
+  margin-right: 20px;
+}
+
+li {
+  list-style-type: none;
+  cursor: pointer;
+}
+
+a {
+  text-decoration: none;
+}
+text {
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+.tyo {
+  margin-left: 40px;
+}
+
+.tht {
+  display: flex;
+  flex-wrap: nowrap;
+}
+.dtr {
+  padding-right: 30px;
+  text-decoration: none;
+  font-size: 17px;
+  position: relative;
+}
+.iko {
+  padding-left: 40px;
+}
+
+.sidenav {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  right: 0;
+  background-color: var.$color-primary;
+  overflow-x: hidden;
+  transition: 0.5s;
+  padding-top: 60px;
+}
+
+.sidenav a {
+  padding: 8px 8px 8px 32px;
+  text-decoration: none;
+  font-size: 17px;
+  color: var.$color-grey;
+  display: block;
+  transition: 0.3s;
+}
+
+.sidenav a:hover {
+  color: var.$color-base;
+}
+span {
+  padding-left: 10px;
+}
+
+.sidenav .closebtn {
+  position: absolute;
+  top: 0;
+  right: 25px;
+  font-size: 40px;
+  margin-left: 50px;
+}
+
+#main {
+  transition: margin-left 0.5s;
+  padding: 16px;
+}
+
+@include mix.mobile-l-styles {
+  .sidenav {
+    padding-top: 70px;
+  }
+  .sidenav a {
+    font-size: 18px;
+  }
+  span {
+    display: flex;
+  }
+}
+
+@include mix.four-k-styles {
+  span {
+    display: none;
+  }
+}
+@include mix.tablet-styles {
+  span {
+    display: flex;
+  }
+}
