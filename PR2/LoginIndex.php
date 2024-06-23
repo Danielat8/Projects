@@ -38,6 +38,7 @@ require_once __DIR__ . "/php/validation/Login.php";
                 <input type="password" id="password" class="input-field" for="password" name="password" />
                 <?= $errors['password'] ? $errors['password'] : ''; ?>
                 <label for="password" class="label">Password</label>
+                <i class="bx bx-lock-alt icon" id="show-password"></i>
               </div>
               <div class="input-box">
                 <input type="submit" class="input-submit" value="Login" />
