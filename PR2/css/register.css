@@ -26,7 +26,7 @@ a:hover {
   text-decoration: underline;
 }
 .wrapper {
-  width: 90%;
+  width: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -150,12 +150,12 @@ a:hover {
 }
 @media only screen and (max-width: 564px) {
   .wrapper {
-    padding: 5px;
+    padding: 40px;
     flex-direction: column;
   }
   .register-box {
-    width: 20%;
-    padding: 10em 10em;
+    width: 100%;
+    padding: 5em 1em;
   }
 }
 @keyframes blink {

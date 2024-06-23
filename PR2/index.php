@@ -88,12 +88,17 @@ require_once __DIR__ . "/php/Queries/BookJoin.php";
       </div>
     </div>
   </div>
-
+  <footer class="fixed  bg-light pt-5 pb-5 mt-5">
+    <div class=" text-center">
+      <span id="quote" class="text-muted"></span>
+    </div>
+  </footer>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
 
   <script src="./js//DarkMode.js"></script>
   <script src="./js//Filter.js"></script>
   <script src="./js//ScriptFooter.js"></script>
+
 
 </body>
 
