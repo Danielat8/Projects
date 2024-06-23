@@ -2,11 +2,10 @@
 require_once __DIR__ . "/php/Autoload.php";
 require_once __DIR__ . "/php/Database/Conection.php";
 require_once __DIR__ . "/php/guards/authentication.php";
-// checkLogin(false);
-// checkLogin(false);
+
 
 if ($_SESSION['role'] === 'admin') {
-    // echo json_encode(['status' => 'error', 'message' => 'Admins cannot delete notes.']);
+
     exit();
 }
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
