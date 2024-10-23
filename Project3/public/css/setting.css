@@ -1,0 +1,34 @@
+input.form-control:hover,
+select.form-select:hover {
+    color: #ff0000;
+}
+
+select.form-select option:hover {
+    color: #ff0000;
+}
+
+.card:hover {
+    border: solid 2px blue;
+}
+
+.btn-primary:hover {
+    background-color: #000000;
+    border-color: #ffdd00;
+}
+
+input.form-control:focus,
+select.form-select:focus {
+    background-color: #000000;
+    color: #fff700;
+    border-color: #eeff00;
+    box-shadow: 0 0 8px rgb(255, 255, 0);
+}
+
+input.form-control,
+select.form-select {
+    color: #004cff;
+}
+
+input.form-control:focus::placeholder {
+    color: #00eeff;
+}

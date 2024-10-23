@@ -1,0 +1,12 @@
+img:hover {
+    transform: scale(1.05);
+}
+
+.recommendation-card:hover {
+    transform: scale(1.05);
+}
+
+.card:hover {
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+    color: red;
+}

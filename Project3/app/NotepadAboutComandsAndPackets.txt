@@ -1,0 +1,53 @@
+Laravel new Project3
+1.Would you like...?
+-none
+2.Which testing...?
+-1
+3.Would you like...?
+-no
+4.Which database ...?
+-mysql
+-menuvam evn porta i pisuvam database,  kreiram vo database project3 odkoga ova ke go napravam go odgovaram 5toto prasanje za migracija (Default database update would you like to run the default database migrations? -Yes).
+Laravel Breeze:
+1.composer require laravel/breeze --dev
+2.php artisan breeze:
+3.npm install
+4.npm run build
+5.npm run dev
+6.ctrl+c za da stopiras 
+7.php artisan serve
+Dokolku go instaliras proektov :
+1.Evn.example smeni go vo evn.potoa : ova kinija kod treba da ti izgleda vaka dokolu koristis mysql : 
+DB_CONNECTION=mysql.
+2.composer update ili composer install koristi edno od ovie dve vo terminal(ova dodava vendor i se sto e vo composer.json ke procita i izvrshi).
+3.php artisan key:generate(generira kluc vo evn vo ovaa linija : APP_KEY="......")
+Ova e za kreiranje na model controler migracija seeder middleware command kernal.
+1.php artisan make:model NameOfModel -m (-m avtomatski kreira i migracija).
+2.php artisan make:seeder NameOfSeeder (ova kreira seeder ).
+// php artisan migrate:fresh --seed (ova seed i izvrsuva migracii se od pocetok sekoj podatok ke ti go izbrise i zapise preku seeder od pocetok)
+---Dokolku go koristis migrate:fresh --seed bi trebalo vo seeders/DatabaseSeeder.php da go vneses svojot seeder eve primer:  */
+    public function run(): void
+    {
+        $this->call([
+            RoleSeeder::class,
+            UserSeeder::class,
+        ]);
+    }
+// php artisan db:seed (ova samo seednuv).
+---Za seeder koristime Faker : mozes ovaa linija kod da ja koristis bez paket da instaliras  :use Faker\Factory as Faker; 
+--Dokolu sakas faker paket da koristis pisi ja ovaa linija vo terminal : composer require fakerphp/faker .
+-php artisan migrate(ova vrsi migracija na se sto e novo i ne  zapisano vo database)
+-php artisan migrate:fresh(ova ja prebrisuva cela database i vrsi migracija ao imas nesto v database informacii ke ti gi izbrise ).
+3.php artisan make:controller NameOfController (ova kreira kontroler).
+4.php artisan make:middleware NameOfMiddleware ( Vo middleware kreirame logika kako primer koi ima pristap do koja strana Middleware odi vo web isto taka i vo kernal ili bootstrap se zapisuva)
+5.php artisan make:command  NameOfCommand (kreirame komanda za da izvrsi funkcija sekoj pat koga ke ja povikame )
+6.touch app/Http/Kernel.php (ova kreira kernel no prazen e)
+jas komandata ja koristam za  php artisan make:command UnbanUsers, -comandava e za da unban
+--php artisan schedule:work ova e za da se izvrsi komandata
+Ova vo terminl go pisuvame za slikite sto se upload i cvto da moze da se prikazat so ovaa komanda kreirame folderi kaj sto odat site sliki koi ke gi upload ili ke gi edit:
+1.mkdir -p public/uploads/photos
+2.chmod -R 775 public/uploads
+3.about storage image : php artisan storage:link.
+4.touch resources/views/filename.blade.php(ova e za da kreiras blade).
+6.php artisan route:clear(gi cisti rutite ).
+5.php artisan serve.
