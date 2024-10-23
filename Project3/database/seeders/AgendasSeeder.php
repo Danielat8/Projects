@@ -14,11 +14,12 @@ class AgendasSeeder extends Seeder
         $faker = Faker::create();
 
         $userId = 1;
+        $isEvent = $faker->boolean;
         if ($userId === 1) {
             for ($i = 1; $i <= 10; $i++) {
                 DB::table('agendas')->insert([
-                    'event_id' => $faker->numberBetween(1, 5),
-                    'conference_id' => $faker->numberBetween(1, 5),
+                    'event_id' => $isEvent ? $faker->numberBetween(1, 5) : null,
+                    'conference_id' => !$isEvent ? $faker->numberBetween(1, 5) : null,
                     'title' => $faker->sentence(3),
                     'description' => $faker->paragraph,
                     'time' => $faker->time('H:i'),

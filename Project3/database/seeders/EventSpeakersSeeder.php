@@ -12,11 +12,12 @@ class EventSpeakersSeeder extends Seeder
     public function run(): void
     {
         $faker = Faker::create();
+        $isEvent = $faker->boolean;
 
         for ($i = 1; $i <= 5; $i++) {
             DB::table('event_speakers')->insert([
-                'event_id' => $faker->numberBetween(1, 5),
-                'conference_id' => $faker->numberBetween(1, 5),
+                'event_id' => $isEvent ? $faker->numberBetween(1, 5) : null,
+                'conference_id' => !$isEvent ? $faker->numberBetween(1, 5) : null,
                 'name' => $faker->name,
                 'title' => $faker->jobTitle,
                 'type' => $faker->randomElement(['speaker', 'special_guest']),

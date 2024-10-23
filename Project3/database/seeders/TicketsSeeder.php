@@ -12,11 +12,12 @@ class TicketsSeeder extends Seeder
     public function run(): void
     {
         $faker = Faker::create();
+        $isEvent = $faker->boolean;
 
         for ($i = 1; $i <= 10; $i++) {
             DB::table('tickets')->insert([
-                'event_id' => $faker->numberBetween(2, 5),
-                'conference_id' => $faker->numberBetween(2, 5),
+                'event_id' => $isEvent ? $faker->numberBetween(1, 5) : null,
+                'conference_id' => !$isEvent ? $faker->numberBetween(1, 5) : null,
                 'ticket_type' => $faker->randomElement(['General Admission', 'VIP', 'Early Bird']),
                 'price' => $faker->randomFloat(2, 10, 200),
                 'quantity' => $faker->numberBetween(2, 100),
