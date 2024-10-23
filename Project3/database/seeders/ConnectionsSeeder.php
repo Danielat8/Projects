@@ -20,7 +20,7 @@ class ConnectionsSeeder extends Seeder
 
         $users = User::pluck('id')->toArray();
 
-        for ($i = 0; $i < 5; $i++) {
+        for ($i = 0; $i < 4; $i++) {
             Connection::create([
                 'user_id' => $faker->randomElement($users),
                 'friend_user_id' => $faker->randomElement($users),
