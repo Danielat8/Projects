@@ -110,16 +110,6 @@ Route::middleware([AdminMiddleware::class])->prefix('admin')->group(function () 
     Route::post('/friends/unban/{id}', [FriendsController::class, 'unbanUser'])->name('user.unban');
     // navbar
     Route::get('/admin', [AdminController::class, 'index'])->name('admin.adminpanel');
-    Route::get('/conferences', [ConferencesController::class, 'conferences'])->name('admin.conferences.index');
-    Route::get('/blogs', [BlogsController::class, 'blogs'])->name('admin.blogs.index');
-    Route::get('/comments', [CommentsController::class, 'comments'])->name('admin.comments.index');
-    Route::get('/events', [EventsController::class, 'events'])->name('admin.events.index');
-    Route::get('/tickets', [TicketsController::class, 'tickets'])->name('admin.tickets.index');
-    Route::get('/speakers', [SpeakersController::class, 'speakers'])->name('admin.speakers.index');
-    Route::get('/agendas', [AgendasController::class, 'agendas'])->name('admin.agendas.index');
-    Route::get('/employees', [EmployeesController::class, 'employees'])->name('admin.employees.index');
-    Route::get('/aboutuser', [AboutUserController::class, 'aboutuser'])->name('admin.aboutuser.index');
-
     // agendas
     Route::get('/agendas', [AgendasController::class, 'index'])->name('admin.agendas.index');
     Route::get('/agendas/create', [AgendasController::class, 'create'])->name('admin.agendas.create');
